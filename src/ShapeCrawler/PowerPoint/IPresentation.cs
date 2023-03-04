@@ -178,7 +178,9 @@ public sealed class SCPresentation : IPresentation
     /// </summary>
     public static IPresentation Create()
     {
+    #if false
         SCLogger.Send();
+    #endif
         
         var stream = new MemoryStream();
         var presDoc = PresentationDocument.Create(stream, PresentationDocumentType.Presentation);
@@ -197,7 +199,9 @@ public sealed class SCPresentation : IPresentation
     /// </summary>
     public static IPresentation Open(string pptxPath)
     {
+    #if false
         SCLogger.Send();
+    #endif
         
         return new SCPresentation(pptxPath);
     }
@@ -207,7 +211,9 @@ public sealed class SCPresentation : IPresentation
     /// </summary>
     public static IPresentation Open(Stream pptxStream)
     {
+    #if false
         SCLogger.Send();
+    #endif
         
         pptxStream.Position = 0;
         return new SCPresentation(pptxStream);

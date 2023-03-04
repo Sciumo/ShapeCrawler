@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if false
+using System;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -9,7 +10,7 @@ using ShapeCrawler.Logger;
 
 // ReSharper disable once CheckNamespace
 namespace ShapeCrawler;
-
+    
 internal static class SCLogger
 {
     private static readonly Lazy<SCLog> Log = new(GetLog);
@@ -112,3 +113,5 @@ internal static class SCLogger
         return false;
     }
 }
+
+#endif
